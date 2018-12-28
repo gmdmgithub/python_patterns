@@ -1,5 +1,12 @@
 import json
 from urllib.request import urlopen
+import sys
+
+#prints a list of arguments - may be used later on
+argument_list = sys.argv
+
+for arg in argument_list:
+    print(arg)
 
 with urlopen("https://free.currencyconverterapi.com/api/v6/currencies") as response:
     source = response.read()
