@@ -43,3 +43,16 @@ for item in data['rates']:
 
 print('#### JSON ###')
 print(dir(json))
+
+##############################CSV
+import csv
+print(5*'#### CSV ###')
+
+with open('sample.csv',encoding='utf-8') as c:
+    content = csv.reader(c)
+    header = next(content)
+    data = [line for line in content]
+
+print(header)
+for d in data:
+    print('csv-line',d)
