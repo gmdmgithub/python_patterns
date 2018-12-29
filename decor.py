@@ -46,4 +46,54 @@ def hello_name(name):
 print(hello_name('cristine'))
 
 #################### string example ################################
-print(15*'#','string example',15*'#')
+print('################### decorator!!!! - how it works ############################')
+#usually it works with inner functiuon!
+from functools import wraps
+
+def mapper(func):
+
+    @wraps(func)  #wraps from functools replace the doc from original function - additional feature not nessessary here
+    def inner_func(list_of_values):
+        return [func(value) for value in list_of_values]
+
+    return inner_func
+
+@mapper
+def camel_func(str):
+    """ 
+    return camelised string from python way string 
+    
+    Arguments: {str} - string to print put
+
+    """
+    return ''.join([st.capitalize() for st in str.split('_')])
+
+#camel_func = mapper(camel_func) #this is the same as mapper!
+# print('camel_func res: '+camel_func('test_the_camel_func'))
+
+teams = ['manchester_united', 'bayern_munchen','ajax_amsterdam']
+
+print(camel_func(teams))
+print(camel_func.__doc__)
+
+print('################### decorator with arguments !!!! - how it works ############################')
+import random
+
+def power_func(power=2):
+    def mapper(fnc):
+        def iner():
+            return fnc()**power
+        return iner
+    return mapper
+
+
+@power_func()
+def random_odd_choice():
+    return random.choice([1,3,5,7,9])
+
+@power_func(3)
+def random_even_choice():
+    return random.choice([2,4,6,8,10])
+
+print('random choice from odd num '+ str(random_odd_choice()))
+print('random choice from even num '+ str(random_even_choice()))
