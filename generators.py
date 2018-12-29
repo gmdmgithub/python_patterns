@@ -1,4 +1,6 @@
- #pip install memory_profiler
+#pip install memory_profiler
+#generators are functions that returns sequence of values - memory efficient
+#yield - wydajność, uzysk - main
 
 import memory_profiler as mem_profile
 import random
@@ -70,3 +72,13 @@ print('Memory (After) : ' + str(mem_profile.memory_usage()) + 'MB')
 
 # print 'Took {} Seconds'.format(t2-t1)
 print('Took ' + str(t2 - t1) + ' Seconds')
+
+print('################### NEXT EXAMPLE ###############################')
+def generate_dif(num1,num2):
+    while(num1<num2):
+        yield num1
+        num1 +=1
+
+res = generate_dif(2,20)
+for i in res:
+    print(i)

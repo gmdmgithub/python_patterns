@@ -33,4 +33,21 @@ f=quadratic_func(2,-4,2)
 print(f(2))
 
 print(quadratic_func(1,3,5)(3))
-    
+
+################## filter and lambda ##########################
+print(20*'#','filter and lambda',20*'#')
+num_list = [2,3,4,5,67,43,23,12,34,56]
+print('original number list',num_list)
+even_num = filter(lambda x: x%2==0,num_list)
+print('even from list',list(even_num))
+
+################## map and lambda ##########################
+print(20*'#','map and lambda',20*'#')
+triple_list = map(lambda n:n*3,num_list)
+print('tripled list',list(triple_list))
+
+################## reduce and lambda ##########################
+from functools import reduce
+print(20 * '#', 'reduce and lambda', 20 * '#')
+reduced_list_sum = reduce(lambda x,y:x+y,num_list, 0)#initial valu is -20
+print('sum with reduce - initial value -20',reduced_list_sum)
