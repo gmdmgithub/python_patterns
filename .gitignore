@@ -4,3 +4,4 @@ Pipfile.lock
 sample.csv
 test.py
 .vscode\
+pattern-test.txt
