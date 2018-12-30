@@ -3,5 +3,5 @@ exhange.json
 Pipfile.lock
 sample.csv
 test.py
-.vscode\
+.vscode/
 pattern-test.txt

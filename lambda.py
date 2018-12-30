@@ -49,5 +49,5 @@ print('tripled list',list(triple_list))
 ################## reduce and lambda ##########################
 from functools import reduce
 print(20 * '#', 'reduce and lambda', 20 * '#')
-reduced_list_sum = reduce(lambda x,y:x+y,num_list, 0)#initial valu is -20
+reduced_list_sum = reduce(lambda x,y:x+y,num_list, -20)#initial valu is -20
 print('sum with reduce - initial value -20',reduced_list_sum)
