@@ -1,9 +1,9 @@
-example.log
 exhange.json
 Pipfile.lock
 sample.csv
 test.py
 python_stack.html
+*.log
 python.png
 .vscode/
 test/__pycache__/

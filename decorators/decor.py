@@ -97,3 +97,53 @@ def random_even_choice():
 
 print('random choice from odd num '+ str(random_odd_choice()))
 print('random choice from even num '+ str(random_even_choice()))
+
+
+print('################### decor next explanation ############################')
+# def decor_function(original_function):
+#     def wrapper_function():
+#         return original_function()
+#     return wrapper_function
+
+# def display():
+#     print('display function ran ...')
+
+# decorated_display = decor_function(display)
+# decorated_display()
+
+print('this below is the same as above!!!! - beauty')
+
+# def decor_function(original_function):
+#     print('test)
+#     message = 'Some message'
+#     def wrapper_function():
+#         print(message)
+#         return original_function()
+#     return wrapper_function
+
+# @decor_function
+# def display():
+#     print('display function ran ...')
+
+# display()
+
+print('next beauty')
+
+def decor_function(original_function): #add as many logic inside as you want
+    def wrapper_function( *args, **kwargs):
+        print('call method before {}'.format(original_function.__name__))
+        return original_function(*args, **kwargs)
+    return wrapper_function
+
+@decor_function
+def display():
+    print('display function ran ...')
+
+@decor_function
+def display_param(name,age):
+    print(f'My name is {name} and I am {age} years old')
+
+
+display()
+
+display_param('Greg',31)

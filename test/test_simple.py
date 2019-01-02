@@ -2,7 +2,7 @@
 
 # name convention of files is important
 
-# python -m unittest #in the directory - but after adding '__main__' - it works like ordinary
+# python -m unittest #in the directory - but after adding '__main__' - it works like ordinary 
 
 import unittest
 import simple
