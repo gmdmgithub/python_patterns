@@ -5,6 +5,7 @@ test.py
 python_stack.html
 *.log
 python.png
+*.txt
 .vscode/
 test/__pycache__/
 pattern-test.txt
