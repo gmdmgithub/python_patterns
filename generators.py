@@ -26,6 +26,7 @@ print(my_nums2)
 print(list(my_nums2))
 
 
+
 print('################### MORE COMPLEX ###############################')
 
 names = ['John', 'Corey', 'Adam', 'Steve', 'Rick', 'Thomas']
@@ -59,13 +60,13 @@ def people_generator(num_people):
 
 #huge difference between Generator (yield) and list!!
 
-# t1 = time.clock()
+# t1 = time.clock() ## - time clock is deprecated - using time_counter
 # people = people_list(1000000) # never convert into list - you lose everything
 # t2 = time.clock()
 
-t1 = time.clock()
+t1 = time.perf_counter()
 people = people_generator(1000000)
-t2 = time.clock()
+t2 = time.perf_counter()
 
 # print 'Memory (After) : {}Mb'.format(mem_profile.memory_usage_psutil())
 print('Memory (After) : ' + str(mem_profile.memory_usage()) + 'MB')
@@ -82,3 +83,15 @@ def generate_dif(num1,num2):
 res = generate_dif(2,20)
 for i in res:
     print(i)
+
+#fibonacci generator
+
+def fib_gen(num):
+    a, b = 0,1
+    for i in range(num):
+            yield "Fib {} and {}".format(i,a)
+            a, b = b, a+b
+
+for fib in fib_gen(10):
+    print(fib)
+        
