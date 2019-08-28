@@ -7,16 +7,16 @@ class Person:
         self.__legs = 2
         self.__name = name
 
-    def nimbles(self):
+    def nimble(self):
         print(f'person has {self.__hands} hands and {self.__legs} legs')
 
-    def __repr__(self):
+    def __repr__(self): #its not to string method __str__
         return f'Person name is: {self.__name}'
 
 
 alan = Person('Alan')
 #alan.__hands - cause compilation error
-alan.nimbles()
+alan.nimble()
 print('Strange access to private field - called "Mangling"',
       alan._Person__name)
 print(alan)  # to string methot should be called (__repr__)
@@ -75,7 +75,7 @@ class IPhoneX(IPhone):
         self.__headphones = headphones
 
     def ring(self):
-        print(f'Hi here iphonex is ringing {self.get_name()}')
+        print(f'Hi here iPhone x is ringing {self.get_name()}')
 
 
 iphx = IPhoneX('model X', 10, False)
@@ -84,7 +84,7 @@ iphx.ring()
 print(iphx)
 
 print(
-    '################### abstrac class - interface ############################'
+    '################### abstract class - interface ############################'
 )
 #in python its a class with all abstract methods @abstractmethod
 from abc import abstractmethod, ABC
@@ -112,7 +112,7 @@ bmw.drive()
 print(bmw)
 
 
-class TouchScreanLaptop(ABC):
+class TouchScreenLaptop(ABC):
     @abstractmethod
     def scroll(self):
         pass
@@ -122,12 +122,12 @@ class TouchScreanLaptop(ABC):
         pass
 
 
-class HP(TouchScreanLaptop):
+class HP(TouchScreenLaptop):
     def scroll(self):
         print('HP is scrolling')
 
 
-class DELL(TouchScreanLaptop):
+class DELL(TouchScreenLaptop):
     def scroll(self):
         print('DELL is scrolling')
 

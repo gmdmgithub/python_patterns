@@ -9,6 +9,7 @@ yapf = "*"
 [packages]
 memory-profiler = "*"
 requests = "*"
+pyjwt = "*"
 
 [requires]
 python_version = "3.7"
