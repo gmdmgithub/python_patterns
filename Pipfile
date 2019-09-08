@@ -10,6 +10,7 @@ yapf = "*"
 memory-profiler = "*"
 requests = "*"
 pyjwt = "*"
+asyncio = "*"
 
 [requires]
 python_version = "3.7"
