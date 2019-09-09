@@ -2,6 +2,7 @@ import asyncio
 import random
 
 async def perform_coroutines(id):
+    print(f'Hi coroutine no. {id}')
     
     #define random time consumer to emulate performing long task
     time_consumer = random.randint(1,7)
@@ -13,7 +14,7 @@ async def perform_coroutines(id):
 async def main_func():
     my_tasks = []
     # lets simulate some multiple tasks
-    for id in range(15):
+    for id in range(8):
         my_tasks.append(asyncio.ensure_future(perform_coroutines(id)))
 
     await asyncio.gather(*my_tasks)
