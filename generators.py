@@ -88,10 +88,10 @@ for i in res:
 
 def fib_gen(num):
     a, b = 0,1
-    for i in range(num):
+    for i in range(1,num):
             yield "Fib {} and {}".format(i,a)
             a, b = b, a+b
 
-for fib in fib_gen(10):
+for fib in fib_gen(11):
     print(fib)
         
