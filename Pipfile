@@ -11,6 +11,8 @@ memory-profiler = "*"
 requests = "*"
 pyjwt = "*"
 asyncio = "*"
+gtts = "*"
+pygame = "*"
 
 [requires]
 python_version = "3.7"
