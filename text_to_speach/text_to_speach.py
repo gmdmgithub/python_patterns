@@ -2,18 +2,14 @@ from gtts import gTTS
 
 import os
 
-text_en = "Bartek is the best"
-text = "Bartek jest gość"
+text_en = "Alex is the best of the best"
+text = "Alex est le meilleur des meilleurs"
 
-output_pl = gTTS(text=text, lang='pl')
-
+output_fr = gTTS(text=text, lang='fr')
 output_en = gTTS(text=text_en)
+output_en.save('alex_en.mp3')
+output_fr.save('alex_fr.mp3')
 
-output_en.save('bartek_en.mp3')
-output_pl.save('bartek_pl.mp3')
-
-from pygame import mixer
-
-mixer.init()
-mixer.music.load('bartek_pl.mp3')
-mixer.music.play()
+from playsound import playsound
+playsound('alex_en.mp3')
+playsound('alex_fr.mp3')
