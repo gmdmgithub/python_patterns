@@ -45,6 +45,7 @@ print('search', result.group())
 
 result = re.findall('v\w\w\w',simple_str) # only 4 character start from v
 print('findall',result)
+print(dir(re))
 
 result = re.match('S\w\w\w', simple_str)  # only at the begining of the string!!!
 print('match', result, result.group())# group from matching gives string
