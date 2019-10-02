@@ -75,6 +75,6 @@ def most_frequent(my_list):
 
 my_list = [1,2,3,4,3,2,5,3,5]
 
-print(my_list.count())
+print(my_list.count)
 
 print(most_frequent(my_list))

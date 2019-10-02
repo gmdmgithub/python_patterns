@@ -4,6 +4,7 @@ test.py
 python_stack.html
 *.log
 python.png
+*.json
 *.txt
 text_to_speach/*.mp3
 .vscode/

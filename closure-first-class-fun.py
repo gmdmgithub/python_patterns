@@ -47,7 +47,7 @@ def outer_func2(add_message):
 
     def inner_fun2():
         print(message) #free variable
-
+ 
     return inner_fun2
 
 my_func = outer_func2('something strange')
