@@ -71,8 +71,22 @@ def bart():
     with open('./bartosz.json') as f:
         data = json.loads(f.read())
         # print(dir(data['products']))
+        check_amount = 1500.0
+        check_period = 5
+        min = 100
+        providerId =''
         for el in data['products']:
-            print(el['interests'])
+            for val in el['interests']:
+                print(check_amount, el['providerId'], val['apr'], val['loanAmountMax'], val['loanAmountMin'], val['loanTenureMin'], val['loanTenureMax'])
+                if check_amount <= val['loanAmountMax'] and \
+                    check_amount >= val['loanAmountMin'] and \
+                    check_period >= val['loanTenureMin'] and \
+                    check_period <= val['loanTenureMax'] and \
+                    val['apr'] <= min:
+
+                    min = val['apr']
+                    providerId = el['providerId']
+        print(f'Minimal interest rate {min} is for provider: {providerId} for the period {check_period} and amount {check_amount}')
 
     for arg in sys.argv:
         print(arg)
