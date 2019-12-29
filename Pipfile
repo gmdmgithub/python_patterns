@@ -14,6 +14,9 @@ asyncio = "*"
 gtts = "*"
 pygame = "*"
 playsound = "*"
+speechrecognition = "*"
+pyttsx3 = "*"
+pyaudio = "*"
 
 [requires]
 python_version = "3.7"

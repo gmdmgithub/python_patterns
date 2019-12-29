@@ -5,8 +5,8 @@ python_stack.html
 *.log
 python.png
 *.json
+*.mp3
 *.txt
-text_to_speach/*.mp3
 .vscode/
 test/__pycache__/
 pattern-test.txt

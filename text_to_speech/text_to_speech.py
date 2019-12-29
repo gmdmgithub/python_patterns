@@ -11,5 +11,7 @@ output_en.save('alex_en.mp3')
 output_fr.save('alex_fr.mp3')
 
 from playsound import playsound
+
+
 playsound('alex_en.mp3')
 playsound('alex_fr.mp3')
