@@ -46,6 +46,9 @@ def get_from_micro():
             speak_with_google('See you soon ...')
             exit()
 
+        if val.lower().startswith('co to jest'):
+            pass
+
     return val
 
 def speak_with_google(string_to_speak="Nothing"):
