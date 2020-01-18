@@ -3,6 +3,9 @@ sample.csv
 test.py
 python_stack.html
 *.log
+*.pdf
+*.jpg
+pdf/*.jpg
 python.png
 *.json
 *.mp3

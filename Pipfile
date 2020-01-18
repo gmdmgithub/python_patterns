@@ -17,6 +17,7 @@ playsound = "*"
 speechrecognition = "*"
 pyttsx3 = "*"
 pyaudio = "*"
+bokeh = "*"
 
 [requires]
 python_version = "3.7"
