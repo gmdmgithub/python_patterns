@@ -41,10 +41,11 @@ def get_from_micro():
         if val.lower() in tel_something:
             speak_with_google("I like swiming and gymnastics, I like dogs. I love my parents")
             return False
-
-        if val.lower() in exits:
-            speak_with_google('See you soon ...')
-            exit()
+        
+        for exit in exits:
+            if exit in val.lower():
+                speak_with_google('See you soon, please comback to me - I miss you')
+                exit()
 
         if val.lower().startswith('co to jest'):
             pass
